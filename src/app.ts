@@ -1,15 +1,16 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
 import { router } from './routes';
-import { login } from './routes/login';
+import { user } from './routes/userRoute';
 import {connect} from 'mongoose';
+
 // import cors from 'cors';
 
 dotenv.config();
 const app = express();
 let port = process.env.port;
-let database = process.env.DATABASE!;
 
+let database = process.env.DATABASE!;
 connect(database);
 
 // app.use(cors());
@@ -19,7 +20,8 @@ app.use(express.urlencoded({extended: true})); // for parsing application/x-www-
 
 
 app.use('/', router);
-app.use('/', login);
+
+app.use('/', user);
 
 
 app.listen(port,()=>{
