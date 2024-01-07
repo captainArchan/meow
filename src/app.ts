@@ -1,7 +1,7 @@
 import express from 'express';
 import * as dotenv from 'dotenv';
 import { router } from './routes';
-import { user } from './routes/userRoute';
+import { user } from './routes/userRoutes';
 import {connect} from 'mongoose';
 
 // import cors from 'cors';

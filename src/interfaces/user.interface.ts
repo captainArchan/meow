@@ -10,5 +10,4 @@ export interface userRegisterInterface{
     lastname: string,
     tel: number,
     email: string,
-    token: string
 }
