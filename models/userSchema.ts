@@ -24,12 +24,9 @@ const userRegister = new Schema<userRegisterInterface>({
     email: {
         type: String,
         required: true
-    },
-    token:{
-        type: String
     }
 })
 
-const registerDB = model('users', userRegister);
+const usersDB = model('users', userRegister);
 
-export default registerDB;
+export default usersDB;

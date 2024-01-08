@@ -10,4 +10,5 @@ export interface userRegisterInterface{
     lastname: string,
     tel: number,
     email: string,
+
 }
